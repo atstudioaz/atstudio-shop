@@ -5,128 +5,163 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f8f8f8;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1e1a24;
+    color: #e0e0e0;
+    line-height: 1.7;
 }
 
 header {
-    background: #1a1a1a;
+    background: #2d1b4e;
     color: white;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header h1 {
-    color: #00d1b2;
+    color: #9d4edd;
+    font-size: 1.8rem;
 }
 
 nav a {
-    color: white;
+    color: #e0e0e0;
     margin-left: 1.5rem;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #00d1b2;
+    color: #9d4edd;
 }
 
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1600x600') center/cover;
-    color: white;
     text-align: center;
     padding: 4rem 1rem;
+    background: linear-gradient(rgba(30, 26, 36, 0.8), rgba(30, 26, 36, 0.9)), url('https://via.placeholder.com/1600x600') no-repeat center/cover;
+    color: white;
 }
 
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #bb86fc;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    color: #ccc;
 }
 
 .btn {
     display: inline-block;
-    background: #00d1b2;
+    background: #9d4edd;
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 5px;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #7b2cbf;
+}
+
+.featured {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.featured h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #bb86fc;
 }
 
 .products {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    justify-content: center;
 }
 
 .product {
-    background: white;
-    border-radius: 10px;
+    background: #2d1b4e;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    width: 300px;
-    text-align: center;
+    width: 280px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .product img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
 
 .product h3 {
-    margin: 1rem 0 0.5rem;
+    padding: 1rem 1rem 0.5rem;
     font-size: 1.2rem;
+    color: #e0e0e0;
 }
 
 .price {
-    color: #e74c3c;
+    color: #00d1b2;
     font-weight: bold;
     font-size: 1.3rem;
-    margin: 0.5rem 0;
+    margin: 0.5rem 1rem;
 }
 
 .add-to-cart {
-    background: #35424a;
+    background: #7b2cbf;
     color: white;
     border: none;
-    padding: 0.7rem;
+    padding: 0.8rem 1rem;
     width: 100%;
     font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    transition: background 0.3s;
 }
 
 .add-to-cart:hover {
-    background: #00d1b2;
+    background: #9d4edd;
 }
 
 footer {
     text-align: center;
-    padding: 2rem;
-    background: #1a1a1a;
-    color: #aaa;
-    margin-top: 3rem;
+    padding: 2.5rem 1rem;
+    background: #1a1520;
+    color: #888;
+    margin-top: 4rem;
 }
 
 footer a {
-    color: #00d1b2;
+    color: #9d4edd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
