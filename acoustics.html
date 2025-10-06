@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Акустические системы - AutoSound Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Все стили из catalog.html */
+    </style>
+</head>
+<body>
+    <!-- Header (аналогично catalog.html) -->
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-volume-up"></i>
+                    <span>AutoSound Pro</span>
+                </a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск товаров...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="user-actions">
+                    <a href="login.html"><i class="fas fa-user"></i> Войти</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="acoustics.html">Акустика</a></li>
+                    <li><a href="amplifiers.html">Усилители</a></li>
+                    <li><a href="subwoofers.html">Сабвуферы</a></li>
+                    <li><a href="installation.html">Установка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs container">
+        <a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / <span>Акустические системы</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <h1 class="section-title">Акустические системы</h1>
+            
+            <div class="catalog-layout">
+                <!-- Sidebar with filters -->
+                <aside class="filter-sidebar">
+                    <div class="filter-group">
+                        <h3>Тип акустики</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox" checked> Компонентная</label>
+                            <label><input type="checkbox"> Коаксиальная</label>
+                            <label><input type="checkbox"> Широкополосная</label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Размер, дюймы</h3>
+                        <div class="filter-options">
+                            <label><input type="checkbox"> 10 см (4")</label>
+                            <label><input type="checkbox"> 13 см (5.25")</label>
+                            <label><input type="checkbox"> 16 см (6.5")</label>
+                            <label><input type="checkbox"> 20 см (8")</label>
+                        </div>
+                    </div>
+                    
+                    <!-- Остальные фильтры как в catalog.html -->
+                </aside>
+                
+                <!-- Products Grid -->
+                <section>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <p>Найдено 12 товаров</p>
+                        <select style="padding: 8px; border: 1px solid #ddd; border-radius: 5px;">
+                            <option>Сначала популярные</option>
+                            <option>Сначала дешевые</option>
+                            <option>Сначала дорогие</option>
+                            <option>По рейтингу</option>
+                        </select>
+                    </div>
+                    
+                    <div class="products">
+                        <!-- Специфичные товары для акустики -->
+                        <div class="product-card">
+                            <div class="product-img">
+                                <i class="fas fa-speaker"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Акустика JBL GTO609C компонентная</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="product-price">12 990 ₽</div>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-img">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="product-info">
+                                <h3>Pioneer TS-1339 13см коаксиальная</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="product-price">4 290 ₽</div>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Добавьте больше товаров -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (аналогично catalog.html) -->
+    <footer>
+        <!-- Тот же футер что и в catalog.html -->
+    </footer>
+
+    <script>
+        // Тот же скрипт что и в catalog.html
+    </script>
+</body>
+</html>
