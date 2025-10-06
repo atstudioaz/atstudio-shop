@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSound Pro - Магазин автозвука</title>
+    <title>AutoSound Pro - Главная</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -26,6 +26,9 @@
             background-color: #f9f9f9;
             color: var(--dark);
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
@@ -58,6 +61,7 @@
             font-size: 24px;
             font-weight: 700;
             color: var(--primary);
+            text-decoration: none;
         }
 
         .logo i {
@@ -195,6 +199,8 @@
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            text-decoration: none;
+            color: inherit;
         }
 
         .category-card:hover {
@@ -309,11 +315,18 @@
             margin-bottom: 20px;
         }
 
+        /* Page Content */
+        .page-content {
+            flex: 1;
+            padding: 40px 0;
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
             padding: 50px 0 20px;
+            margin-top: auto;
         }
 
         .footer-content {
@@ -375,6 +388,22 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 14px;
             color: #ccc;
+        }
+
+        /* Breadcrumbs */
+        .breadcrumbs {
+            padding: 15px 0;
+            background-color: #f0f0f0;
+            margin-bottom: 30px;
+        }
+
+        .breadcrumbs a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .breadcrumbs span {
+            color: var(--gray);
         }
 
         /* Responsive Design */
@@ -447,10 +476,10 @@
     <header>
         <div class="container">
             <div class="header-top">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <i class="fas fa-volume-up"></i>
                     <span>AutoSound Pro</span>
-                </div>
+                </a>
                 
                 <div class="search-bar">
                     <input type="text" placeholder="Поиск товаров...">
@@ -458,8 +487,8 @@
                 </div>
                 
                 <div class="user-actions">
-                    <a href="#"><i class="fas fa-user"></i> Войти</a>
-                    <a href="#"><i class="fas fa-shopping-cart"></i> Корзина</a>
+                    <a href="login.html"><i class="fas fa-user"></i> Войти</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Корзина</a>
                 </div>
                 
                 <button class="mobile-menu-btn">
@@ -469,181 +498,191 @@
             
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Акустика</a></li>
-                    <li><a href="#">Усилители</a></li>
-                    <li><a href="#">Сабвуферы</a></li>
-                    <li><a href="#">Аксессуары</a></li>
-                    <li><a href="#">Установка</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="acoustics.html">Акустика</a></li>
+                    <li><a href="amplifiers.html">Усилители</a></li>
+                    <li><a href="subwoofers.html">Сабвуферы</a></li>
+                    <li><a href="installation.html">Установка</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs container">
+        <a href="index.html">Главная</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <h1>Профессиональный автозвук</h1>
             <p>Лучшее оборудование для вашего автомобиля по доступным ценам. Широкий выбор акустики, усилителей и сабвуферов.</p>
-            <a href="#" class="btn">В каталог</a>
+            <a href="catalog.html" class="btn">В каталог</a>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="container">
-        <h2 class="section-title">Категории товаров</h2>
-        <div class="categories">
-            <div class="category-card">
-                <div class="category-img">
-                    <i class="fas fa-music"></i>
-                </div>
-                <div class="category-info">
-                    <h3>Акустические системы</h3>
-                    <p>Компонентные и коаксиальные динамики</p>
-                </div>
+    <!-- Main Content -->
+    <main class="page-content">
+        <!-- Categories Section -->
+        <section class="container">
+            <h2 class="section-title">Категории товаров</h2>
+            <div class="categories">
+                <a href="acoustics.html" class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3>Акустические системы</h3>
+                        <p>Компонентные и коаксиальные динамики</p>
+                    </div>
+                </a>
+                
+                <a href="amplifiers.html" class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3>Усилители</h3>
+                        <p>Мощные усилители для чистого звука</p>
+                    </div>
+                </a>
+                
+                <a href="subwoofers.html" class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3>Сабвуферы</h3>
+                        <p>Низкие частоты для мощного баса</p>
+                    </div>
+                </a>
+                
+                <a href="head-units.html" class="category-card">
+                    <div class="category-img">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="category-info">
+                        <h3>Головные устройства</h3>
+                        <p>Магнитолы и медиасистемы</p>
+                    </div>
+                </a>
             </div>
-            
-            <div class="category-card">
-                <div class="category-img">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <div class="category-info">
-                    <h3>Усилители</h3>
-                    <p>Мощные усилители для чистого звука</p>
-                </div>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-img">
-                    <i class="fas fa-drum"></i>
-                </div>
-                <div class="category-info">
-                    <h3>Сабвуферы</h3>
-                    <p>Низкие частоты для мощного баса</p>
-                </div>
-            </div>
-            
-            <div class="category-card">
-                <div class="category-img">
-                    <i class="fas fa-headphones"></i>
-                </div>
-                <div class="category-info">
-                    <h3>Головные устройства</h3>
-                    <p>Магнитолы и медиасистемы</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Products Section -->
-    <section class="container">
-        <h2 class="section-title">Популярные товары</h2>
-        <div class="products">
-            <div class="product-card">
-                <div class="product-img">
-                    <i class="fas fa-speaker"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Акустика JBL GTO609C</h3>
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
+        <!-- Products Section -->
+        <section class="container">
+            <h2 class="section-title">Популярные товары</h2>
+            <div class="products">
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-speaker"></i>
                     </div>
-                    <div class="product-price">12 990 ₽</div>
-                    <button class="add-to-cart">В корзину</button>
+                    <div class="product-info">
+                        <h3>Акустика JBL GTO609C</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">12 990 ₽</div>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Усилитель Pioneer GM-D9701</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="product-price">18 490 ₽</div>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-drum"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Сабвуфер Kicx ICQ 12</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="product-price">7 850 ₽</div>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-img">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <div class="product-info">
+                        <h3>Магнитола Sony DSX-A415BT</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="product-price">9 990 ₽</div>
+                        <button class="add-to-cart">В корзину</button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="product-card">
-                <div class="product-img">
-                    <i class="fas fa-volume-up"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Усилитель Pioneer GM-D9701</h3>
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="product-price">18 490 ₽</div>
-                    <button class="add-to-cart">В корзину</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-img">
-                    <i class="fas fa-drum"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Сабвуфер Kicx ICQ 12</h3>
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <div class="product-price">7 850 ₽</div>
-                    <button class="add-to-cart">В корзину</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-img">
-                    <i class="fas fa-headphones"></i>
-                </div>
-                <div class="product-info">
-                    <h3>Магнитола Sony DSX-A415BT</h3>
-                    <div class="product-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="product-price">9 990 ₽</div>
-                    <button class="add-to-cart">В корзину</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Section -->
-    <section class="container">
-        <h2 class="section-title">Наши услуги</h2>
-        <div class="services">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-tools"></i>
+        <!-- Services Section -->
+        <section class="container">
+            <h2 class="section-title">Наши услуги</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Профессиональная установка</h3>
+                    <p>Качественный монтаж автозвукового оборудования с гарантией</p>
+                    <a href="installation.html" class="btn" style="margin-top: 15px;">Подробнее</a>
                 </div>
-                <h3>Профессиональная установка</h3>
-                <p>Качественный монтаж автозвукового оборудования с гарантией</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-cogs"></i>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Настройка звука</h3>
+                    <p>Точная настройка аудиосистемы под ваш автомобиль и предпочтения</p>
+                    <a href="tuning.html" class="btn" style="margin-top: 15px;">Подробнее</a>
                 </div>
-                <h3>Настройка звука</h3>
-                <p>Точная настройка аудиосистемы под ваш автомобиль и предпочтения</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-headset"></i>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Консультации</h3>
+                    <p>Помощь в выборе оборудования и проектировании аудиосистемы</p>
+                    <a href="contacts.html" class="btn" style="margin-top: 15px;">Связаться</a>
                 </div>
-                <h3>Консультации</h3>
-                <p>Помощь в выборе оборудования и проектировании аудиосистемы</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -663,22 +702,22 @@
                 <div class="footer-column">
                     <h3>Каталог</h3>
                     <ul>
-                        <li><a href="#">Акустические системы</a></li>
-                        <li><a href="#">Усилители</a></li>
-                        <li><a href="#">Сабвуферы</a></li>
-                        <li><a href="#">Головные устройства</a></li>
-                        <li><a href="#">Аксессуары</a></li>
+                        <li><a href="acoustics.html">Акустические системы</a></li>
+                        <li><a href="amplifiers.html">Усилители</a></li>
+                        <li><a href="subwoofers.html">Сабвуферы</a></li>
+                        <li><a href="head-units.html">Головные устройства</a></li>
+                        <li><a href="accessories.html">Аксессуары</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Помощь</h3>
                     <ul>
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">Гарантия</a></li>
-                        <li><a href="#">Возврат товара</a></li>
-                        <li><a href="#">Частые вопросы</a></li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="delivery.html">Доставка и оплата</a></li>
+                        <li><a href="warranty.html">Гарантия</a></li>
+                        <li><a href="returns.html">Возврат товара</a></li>
+                        <li><a href="faq.html">Частые вопросы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </div>
                 
