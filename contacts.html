@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - AutoSound Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Все стили из index.html + дополнительные для контактов */
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .map-container {
+            height: 400px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header (аналогично index.html) -->
 
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs container">
+        <a href="index.html">Главная</a> / <span>Контакты</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="container">
+            <h1 class="section-title">Контакты</h1>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 30px;">Наши контакты</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Адрес</h3>
+                            <p>Москва, ул. Автозвуковая, 15<br>БЦ "Аудиоцентр", 3 этаж</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Телефоны</h3>
+                            <p>+7 (495) 123-45-67<br>+7 (495) 123-45-68</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p>info@autosound.ru<br>sales@autosound.ru</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h3>Время работы</h3>
+                            <p>Пн-Пт: 9:00-20:00<br>Сб-Вс: 10:00-18:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 30px;">Обратная связь</h2>
+                    <form>
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input type="text" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Тема сообщения</label>
+                            <select>
+                                <option>Консультация по товарам</option>
+                                <option>Запись на установку</option>
+                                <option>Вопрос по гарантии</option>
+                                <option>Сотрудничество</option>
+                                <option>Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Сообщение</label>
+                            <textarea placeholder="Опишите ваш вопрос..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <!-- Здесь будет карта -->
+                <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: #e0e0e0; color: #666;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map" style="font-size: 50px; margin-bottom: 15px;"></i>
+                        <p>Карта будет загружена здесь</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (аналогично index.html) -->
+</body>
+</html>
